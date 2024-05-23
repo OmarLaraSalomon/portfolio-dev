@@ -1,3 +1,4 @@
+
 ---
 import Html from "../components/icons/Html.astro"
 import Css from "../components/icons/Css.astro"
@@ -142,12 +143,12 @@ const PROJECTS = [
     tags: [TAGS.HTML,TAGS.CSS, TAGS.JS, TAGS.POSTGRESQL,TAGS.ANACONDA, TAGS.PYTHON, TAGS.DJANGO, TAGS.DOCKER],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Portfolio-dev",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "../public/imgs/AppDjango.png",
-    tags: [TAGS.NODE, TAGS.TAILWIND],
+      "Porftoflio para desarolladres y programadores. Enfocada en un diseño minimalista y futurista, aplicando tecnicas de esitlo como la grilla. Creada desde cero con Astro y Tailwind CSS.",
+    link: "#",
+    image: "../public/imgs/portfolio-dev.png",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND],
   },
 
 
@@ -163,7 +164,7 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
 <div class="flex flex-col sm:flex-row sm:max-w-2xl max-w-[600px] mx-auto overflow-hidden  bg-[#01011bab] rounded-3xl  border-2 border-[#2a2a67a3]  p-3">   
   <div class="w-full md:w-1/2">
-    <div class="relative top-5 flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+    <div class="relative  flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
         <img class=" rounded-xl  object-cover w-auto sm:h-80 h-56  transition duration-500 hover:scale-105" loading="lazy" 
               src={image} 
               alt={`captura dle proyecto ${image}`}/>
@@ -219,3 +220,9 @@ const PROJECTS = [
    
 
         
+
+
+
+
+
+
