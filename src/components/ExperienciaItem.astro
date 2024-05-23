@@ -1,0 +1,30 @@
+---
+
+interface Props {//aqui erstamos tipando
+    title: string; 
+    company?: string; //Puede ser opcional
+    description: string;
+    links?: { text: string; url: string }[]; // Cambiado a un array de objetos
+    date: string;
+    reverse?: boolean;
+  }
+  
+  const { title, company, description, links, date, reverse } = Astro.props;
+---  
+<h3 class="text-lg font-semibold lg:text-xl">{title}</h3>
+{/*muestra el nombre de la empresa  solo si la variable company tiene un valor que no sea null, undefined o una cadena vacía. */}
+    {company && <p class="mt-1 font-medium text-indigo-500">{company}</p>}
+{/* Si company es falsa el contenido después del && no se renderizará. */}    
+<p class="mt-2 leading-6 text-[14px] text-pretty mb-1  text-gray-200 dark:text-gray-400">{description}</p>
+    <span class="absolute text-sm text-indigo-100/75 -top-6 left-2 whitespace-nowrap ">{date}</span>
+    {links && (
+<ul>
+  {links.map((link) => (
+    <>
+      <a target="_blank" class="text-indigo-500 underline  m-2" href={link.url}>{link.text}</a>{' '}
+    </>
+  ))}
+</ul>
+      )}
+  </div>
+  

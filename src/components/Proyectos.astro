@@ -1,0 +1,221 @@
+---
+import Html from "../components/icons/Html.astro"
+import Css from "../components/icons/Css.astro"
+import Javascript from "../components/icons/Javascript.astro"
+import Astrito from "../components/icons/Astrito.astro"
+import React from"../components/icons/React.astro"
+import Tailwind from "../components/icons/Tailwind.astro"
+import Postgresql from "../components/icons/Postgresql.astro"
+import Mongo from "../components/icons/Mongo.astro"
+import Anaconda from "../components/icons/Anaconda.astro"
+import Python from "../components/icons/Python.astro"
+import Django from "../components/icons/Django.astro"
+import Node from "../components/icons/Node.astro"
+import Express from "../components/icons/Express.astro"
+import Docker from "../components/icons/Docker.astro"
+import Vite from "../components/icons/Vite.astro"
+import Git from "../components/icons/Git.astro"
+
+
+
+const TAGS = {
+
+
+  HTML: {
+    name: "Html",
+    class: "bg-black  text-white",
+    icon: Html,
+  },
+
+  CSS: {
+    name: "Css",
+    class: "bg-[#003159] text-white",
+    icon: Css,
+  },
+
+  JS: {
+    name: "JavaScript",
+    class: "bg-black  text-white",
+    icon: Javascript,
+  },
+
+  ASTRO: {
+    name: "Astro",
+    class: "bg-black  text-white",
+    icon: Astrito,
+  },
+
+  
+  REACT: {
+    name: "React",
+    class: "bg-black  text-white",
+    icon: React,
+  },
+
+
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+
+
+  POSTGRESQL: {
+    name: "Postgresql",
+    class: "bg-[#003159] text-white",
+    icon: Postgresql,
+  },
+
+
+  MONGO: {
+    name: "Mongo",
+    class: "bg-green-900 text-white",
+    icon: Mongo,
+  },
+
+
+  ANACONDA: {
+    name: "Anaconda",
+    class: "bg-green-900 text-white",
+    icon: Anaconda,
+  },
+
+
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#b79200] text-black",
+    icon: Python,
+  },
+
+
+  DJANGO: {
+    name: "Django",
+    class: "bg-green-900 text-white",
+    icon: Django,
+  },
+
+
+  NODE: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: Node,
+  },
+
+  EXPRESS: {
+    name: "Express",
+    class: "bg-black text-white",
+    icon: Express,
+  },
+
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#003159] text-white",
+    icon: Docker,
+  },
+
+
+  VITE: {
+    name: "Vite",
+    class: "bg-purple-900 text-white",
+    icon: Vite,
+  },
+
+
+
+  GIT: {
+    name: "Git",
+    class: "bg-black text-white",
+    icon: Git,
+  },
+
+}
+
+
+const PROJECTS = [
+  {
+    title: "Ecommerce - Cobra Kai",
+    description:
+    `Aplicación web con tematica de la serie de "Cobra kai". Qúe incluye un login y registro de usuarios y dentro de la aplicación se presentan una sección de noticias, un carrito de compras ccon funcionalidad de SMTP para el envio de correo de la compra y un formulario para contactar.` ,
+    link: "#",
+    github: "#",
+    image: "../public/imgs/AppDjango.png",
+    tags: [TAGS.HTML,TAGS.CSS, TAGS.JS, TAGS.POSTGRESQL,TAGS.ANACONDA, TAGS.PYTHON, TAGS.DJANGO, TAGS.DOCKER],
+  },
+  {
+    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    description:
+      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
+    link: "https://adventjs.dev",
+    image: "../public/imgs/AppDjango.png",
+    tags: [TAGS.NODE, TAGS.TAILWIND],
+  },
+
+
+
+
+
+]
+---
+
+<div class="flex flex-col gap-y-16 ">
+  
+ {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+<div class="flex flex-col sm:flex-row sm:max-w-2xl max-w-[600px] mx-auto overflow-hidden  bg-[#01011bab] rounded-3xl  border-2 border-[#2a2a67a3]  p-3">   
+  <div class="w-full md:w-1/2">
+    <div class="relative top-5 flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+        <img class=" rounded-xl  object-cover w-auto sm:h-80 h-56  transition duration-500 hover:scale-105" loading="lazy" 
+              src={image} 
+              alt={`captura dle proyecto ${image}`}/>
+    </div>
+
+      
+    </div>
+
+    <div class="sm:p-4 p-2 sm:w-1/2 flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-100">
+                {title}</h3>
+            <p class="mt-4  m-2 text-pretty  text-sm text-gray-200 dark:text-gray-400">
+              {description}
+            </p>
+        </div>
+
+        <div class="flex flex-wrap ">
+          <ul class="flex flex-row  flex-wrap mb-2 gap-x-2 pb-10">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs  ${tag.class} py-1 px-2 m-1 `}>
+                  
+                  <tag.icon className="w-4 h-4" title={tag.name} />
+                  {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+  
+
+    ))
+  }
+
+</div>
+
+
+   
+
+        

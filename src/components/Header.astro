@@ -1,0 +1,41 @@
+---
+---
+
+<header
+
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-3 "
+>
+<!--El elemento se elimina del flujo normal  y no se crea ningún espacio-->
+  <nav
+    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+  >
+  <a class="relative block px-2 py-2 transition hover:text-purple-700 dark:hover:text-purple-600" href="#sobre-mi">Sobre Mí</a>
+  <a class="relative block px-2 py-2 transition hover:text-purple-700 dark:hover:text-purple-600" href="#experiencia">Experiencia</a>
+  <a  class="relative block px-2 py-2 transition hover:text-purple-700 dark:hover:text-purple-600"href="#proyectos">Proyectos</a>  
+  <a  class="relative block px-2 py-2 transition hover:text-purple-700 dark:hover:text-purple-600" href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();   /*llamamos la animacion y se va a activar con el scroll */
+    animation-range: 0 100px;/*la animacion vaa ir de 0 a 200px de scroll en los 200 ya llega al final*/
+  }
+/*como estamos usando tailwind para aplciar la animacion es @apply */
+/*blur: /*desenfoque o cambio de color difumine*/ 
+  @keyframes nav-shadown {
+  
+    to {
+      @apply 
+      shadow-lg ring-1
+    text-black
+        backdrop-blur
+        dark:bg-gray-800/90 
+        bg-white/50
+        ring-white/10;
+    }
+  }
+</style>

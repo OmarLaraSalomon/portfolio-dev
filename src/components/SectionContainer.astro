@@ -1,0 +1,12 @@
+---
+const { class: className, id } = Astro.props
+//con esto nos permite agregar una clase extra en el componente del lado del index
+---
+
+<section
+  id={id}
+  data-section={id}
+  class={` w-full mx-auto container lg:w ${className}`}
+>
+  <slot />
+</section>
