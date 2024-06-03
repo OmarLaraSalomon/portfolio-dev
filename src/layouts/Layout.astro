@@ -25,14 +25,16 @@ const { description, title } = Astro.props
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="relative text-black dark:text-white">
+	<body class="absolute text-black dark:text-white">
 
 		<div class="absolute top-0 z-[-2] h-full w-full min-h-screen
 		bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]
 		bg-[size:20px_20px]">
 	</div>
 
-		
+
+
+
 
 
 		<Header/>
@@ -43,6 +45,7 @@ const { description, title } = Astro.props
 		</SectionContainer>
 	
 	</body>
+	
 </html>
 <style is:global>
 	:root {
@@ -62,6 +65,7 @@ const { description, title } = Astro.props
 		flex-direction: column;
         overscroll-behavior: none;
 		min-height: 100vh; /*el 100 del viewpport porquer lo querremos siempre asi  */
+		min-width: 100vw;
 	}
 
 	
